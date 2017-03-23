@@ -66,7 +66,7 @@ class Student
           WHERE grade = "10"
           LIMIT 1
           SQL
-    DB[:conn].execute(sql).collect {|row| self.new_from_db(row) }.first
+    DB[:conn].execute(sql).collect {|row| self.new_from_db(row)}.first
   end
 
   def self.all_students_in_grade_x(grade)
